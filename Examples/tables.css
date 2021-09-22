@@ -1,0 +1,14 @@
+
+th, td
+{
+    border-bottom: 1px solid rgb(231, 64, 64);
+    padding: 5px;
+}
+table
+{
+  border-collapse: collapse;
+}
+tr:nth-child(odd) 
+{
+    background-color: rgb(249, 204, 204);
+}
