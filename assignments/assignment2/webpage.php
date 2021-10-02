@@ -18,7 +18,7 @@
 	?>
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $title ?>;</title>
+	<title><?php echo $title ?></title>
 	<style>
 		* {margin: 0; padding: 0;}
 		body {font: 120%/1.5 sans-serif;}

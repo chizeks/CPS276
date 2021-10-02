@@ -17,7 +17,7 @@
     }
 ?>
     <head>
-        <title>Nested List</title>
+        <title>Table</title>
     </head>
     <body>
         <?php 
