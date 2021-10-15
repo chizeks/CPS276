@@ -2,14 +2,17 @@
 
 class AddNames
     {
+
         function addNames()
         {
-           $output="";
-           $input = <<<HTML
-           $output.={$_POST["addName"]};
-           $output.="\n";
-           HTML;
-            return $output;
+        if(isset($_POST['addName']))
+        {
+            $namesList=$_POST['namelist'];
+            $aName=$_POST['addName'];
+           
+            $namesList.="{$aName}\n";
+        }
+         return $namesList;
         }
     }
 
