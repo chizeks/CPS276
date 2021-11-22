@@ -20,7 +20,7 @@ class noteProc  extends PdoMethods {
             $this->debug .=  "noteTimeStampStr=".$noteTimeStampStr. " ";
         } else 
         {
-            return('Invalid or Missing Date.' . $_POST['dateTime']);
+            return('Invalid or missing date.' . $_POST['dateTime']);
         } 
      
         $n_txt = $_POST['n_txt'];
@@ -30,7 +30,7 @@ class noteProc  extends PdoMethods {
         }
         else
         {
-            return('Missing Note.');
+            return('Missing note.');
         } 
 		//sql stuff
 		$sql = "insert into  notes values ( :note_time_stamp,:note_text) ";
