@@ -3,3 +3,5 @@ phpmysqltest/classes/Db_conn.php
 .vscode/sftp.json
 phpmysqltest/classes/Db_conn.php
 assignments/assignment7/Db_conn.php
+assignments/assignment10/Db_conn.php
+assignments/assignment10_2/classes/Db_conn.php
