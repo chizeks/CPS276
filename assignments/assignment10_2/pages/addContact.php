@@ -149,7 +149,8 @@ function addData($post){
   // this converts the checkbox contact info into a string, idk if this is the best way to 
   //solve this?            
     $contactType = "";
-    foreach($post['contact'] as $var){
+    foreach($post['contact'] as $var)
+    {
     $contactType .= $var.",";
     }    
     $contactType = substr($contactType, 0, -1);
@@ -169,10 +170,12 @@ function addData($post){
 
       $result = $pdo->otherBinded($sql, $bindings);
 
-      if($result == "error"){
+      if($result == "error")
+      {
         return getForm("<p>There was a problem processing your form</p>", $elementsArr);
       }
-      else {
+      else 
+      {
         return getForm("<p>Contact Information Added</p>", $elementsArr);
       }
       
@@ -213,7 +216,7 @@ $form = <<<HTML
     </div>
     
     <div class="form-group">
-      <label for="state">State</label>
+      <label for="state">State:</label>
       <select class="form-control" id="state" name="state">
         $options
       </select>

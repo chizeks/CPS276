@@ -1,7 +1,4 @@
 <?php
-
-
-
 class Validation{
 	// $error is true if any errors are found, start out false assuming no errors
 	private $error = false;       
@@ -10,7 +7,6 @@ class Validation{
 	CHECK FORMAT IS BASCALLY A SWITCH STATEMENT THAT TAKES A VALUE AND THE NAME 
 	OF THE FUNCTION THAT NEEDS TO BE CALLED FOR THE REGULAR EXPRESSION
 	*/
-
 	public function checkFormat($value, $regex)
 	{
 		switch($regex){
@@ -44,8 +40,6 @@ class Validation{
 		return $this->setError($match);
 	}
 
-
-
 	private function email($value)
     {
         $match = preg_match('/\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/', $value);
@@ -66,27 +60,22 @@ class Validation{
 
 
     //ERROR STUFF
-	private function setError($match){
-
-		if(!$match){
-
+	private function setError($match)
+	{
+		if(!$match)
+		{
 			$this->error = true;
 			return "error";
 		}
 		else {
-
 			return "";
-
 		}
 	}
 
-
 	/* THE SET MATCH FUNCTION ADDS THE KEY VALUE PAR OF THE STATUS TO THE ASSOCIATIVE ARRAY */
-	
-	public function checkErrors(){
-
+	public function checkErrors()
+	{
 		return $this->error;
-
 	}
 	
 }

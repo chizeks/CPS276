@@ -1,7 +1,5 @@
 <?php
-
 require_once('pages/routes.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +12,7 @@ require_once('pages/routes.php');
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
               crossorigin="anonymous">
     </head>
-
     <body class="container p-3 my-3">
-        
-    
         <?php   //make html
             echo $nav;        //navigation stuff
             echo $result[0];  //page banner

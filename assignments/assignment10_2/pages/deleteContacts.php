@@ -63,7 +63,8 @@ function init(){
             </tr>
         </thead><tbody>";
 
-        foreach($records as $row){
+        foreach($records as $row)
+        {
             $output .= "<tr>
             <td>{$row['name']}</td>
             <td>{$row['address']}</td>
@@ -82,7 +83,8 @@ function init(){
 
        
         //error or success mssg
-        if(isset($error)){
+        if(isset($error))
+        {
             if($error)
             {
                 $msg = "<p>Could not delete the contact(s)</p>";

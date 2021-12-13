@@ -101,7 +101,8 @@ function addData($post){
       $sql = "SELECT * FROM admin WHERE email = '{$post['email']}';";
       $records = $pdo->selectNotBinded($sql);
 
-    if(count($records) !== 0){
+    if(count($records) !== 0)
+    {
       return getForm("<p>Admin already exists</p>", $elementsArr);
     }
 
@@ -116,10 +117,12 @@ function addData($post){
 
       $result = $pdo->otherBinded($sql, $bindings);
 
-      if($result == "error"){
+      if($result == "error")
+      {
         return getForm("<p>Something went wrong processing your form</p>", $elementsArr);
       }
-      else {
+      else 
+      {
         return getForm("<p>Admin Information Added</p>", $elementsArr);
       }
       
@@ -129,11 +132,13 @@ function addData($post){
 /* THIS IS THE GET FORM FUCTION WHICH WILL BUILD THE FORM BASED UPON UPON THE (UNMODIFIED
    OF MODIFIED) ELEMENTS ARRAY. */
 
-function getForm($acknowledgement, $elementsArr){
+function getForm($acknowledgement, $elementsArr)
+{
 
 global $stickyForm;
 
-if(isset($elementsArr['state'])){ //make it not complain at me by checking arr before using
+if(isset($elementsArr['state']))
+{ //make it not complain at me by checking arr before using
 $options = $stickyForm->createOptions($elementsArr['state']);
 }
 /* CREATE FORM AND ADD APPROPRIATE VALUES*/

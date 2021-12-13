@@ -87,20 +87,17 @@ $elementsArr = [
 
 
 // If the entered data is valid 
-
 function checkLogin($post){
   
   global $elementsArr;  
   
   // IF EVERYTHING WORKS ADD THE DATA HERE TO THE DATABASE HERE USING THE $_POST SUPER GLOBAL ARRAY */
-      
       require_once('classes/PdoMethods.php');
 
       //sql stuff
       $pdo = new PdoMethods();
       $sql = "SELECT * FROM admin WHERE email = '{$post['email']}';";
       $records = $pdo->selectNotBinded($sql);
-
 
       if((count($records) != 0) && ($_POST['password'] == $records[0]['password'])){
     
@@ -117,23 +114,11 @@ function checkLogin($post){
        {
         //incorrect username/password
         return getForm("<span style='color: red; margin-left: 15px;'>Invalid Login</span>", $elementsArr);
-      }
-    
-
-      
-      
+      }     
 }
-   
-// ***************************************************************************************
-// getform() function builds the login form based on the $elementsArr either as orginally
-// E (UNMODIFIED and MODIFIED) ELEMENTS ARRAY
-// ***************************************************************************************
-
+//form stuff
 function getForm($acknowledgement, $elementsArr){
-
 global $stickyForm;
-
-// This is the HEREDOC string that creates the form with the correct values and error messages
 
 $form = <<<HTML
     <h1>Login</h1>
@@ -155,10 +140,7 @@ $form = <<<HTML
   </form>
 HTML;
 
-// RETURN ARRAY THAT CONTAINS AN ACKNOWLEDGEMENT AND THE FORM.  THIS IS DISPLAYED ON THE INDEX PAGE. */
-
 return [$acknowledgement, $form];
-
 }
 
 ?>
