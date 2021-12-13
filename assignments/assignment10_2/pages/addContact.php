@@ -123,7 +123,7 @@ $elementsArr = [
     "errorOutput"=>"",
     "action"=>"required",
     "type"=>"radio",
-    "value"=>["10-18"=>"", "19-30"=>"", "30-50"=>"", "51+"=>""]
+    "value"=>["10-18"=>"", "19-30"=>"", "30-50"=>"", "51+"=>"19-30"]
   ]
  
 ];
@@ -181,12 +181,6 @@ function addData($post){
       
 }
 
-// ************************************************************************************
-//
-// getForm() builds the form using the $elementsArr with standard testing inputs 
-// (unmodified array) or hand entered testing inputs (modified array).
-//
-// ************************************************************************************
 
 function getForm($acknowledgement, $elementsArr){
 
@@ -285,12 +279,6 @@ $form = <<<HTML
   </form>
 HTML;
 
-//
-// Return array that contains an acknowledgement and the form to be displayed on the index.php page
-//
-
 return [$acknowledgement, $form];
-
 }
-
 ?>

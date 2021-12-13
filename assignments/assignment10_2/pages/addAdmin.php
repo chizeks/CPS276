@@ -65,21 +65,21 @@ $elementsArr = [
 	  "errorMessage"=>"<span style='color: red; margin-left: 15px;'>Name cannot be blank and must be a standard name</span>",
     "errorOutput"=>"",
     "type"=>"text",
-    "value"=>"",
+    "value"=>"Bob McBobson",
 		"regex"=>"name"
 	],
 	"email"=>[
 		"errorMessage"=>"<span style='color: red; margin-left: 15px;'>Email address cannot be blank and must be a valid email address</span>",
     "errorOutput"=>"",
     "type"=>"text",
-		"value"=>"",
+		"value"=>"bob.bob@bob.com",
 		"regex"=>"email"
   ],
   "password"=>[
 		"errorMessage"=>"<span style='color: red; margin-left: 15px;'>Password cannot be blank and must be a valid password</span>",
     "errorOutput"=>"",
     "type"=>"text",
-		"value"=>"",
+		"value"=>"Bob1982",
 		"regex"=>"password"
   ],
   "status"=>[

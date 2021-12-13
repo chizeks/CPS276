@@ -1,6 +1,6 @@
 <?php
 //routes page
-//a confusing endevaor, but i was pleased when it worked
+
 
 session_start();
 
